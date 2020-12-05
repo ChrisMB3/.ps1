@@ -1,0 +1,42 @@
+﻿param (
+    [Parameter(Mandatory=$true)][Float]$max,
+    [Parameter(Mandatory=$true)][Float]$score
+ )
+
+$grade = $score/$max
+echo $grade
+
+if ($grade -ge 0.90)
+{
+    "Betyg: A"
+}
+
+elseif ($grade -ge 0.80)
+{
+    "Betyg: B"
+    
+}
+
+elseif ($grade -ge 0.70)
+{
+    "Betyg: C"
+
+}
+
+elseif ($grade -ge 0.60)
+{
+    "Betyg: D"
+
+}
+
+elseif ($grade -ge 0.40)
+{
+    "Betyg: E"
+
+}
+
+elseif ($grade -lt 0.40)
+{
+    "Betyg: F"
+
+}
